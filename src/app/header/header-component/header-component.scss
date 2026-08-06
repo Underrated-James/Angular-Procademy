@@ -40,7 +40,9 @@
     display: flex;
 }
 .ekart--search-bar{
-    padding: 0 3vh;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 .ekart-search-box{
     width: 170px;
