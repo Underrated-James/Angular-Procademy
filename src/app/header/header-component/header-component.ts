@@ -10,5 +10,9 @@ import { TopMenu } from '../top-menu/top-menu';
   styleUrls: ['./header-component.scss'],
 })
 export class HeaderComponent {
-  
+  display = false;
+
+  onClick(){
+    this.display = !this.display; 
+  }
 }
