@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './top-header.html',
   styleUrl: './top-header.scss',
 })
-export class TopHeader {}
+export class TopHeader {
+  discount = "NEW SALE ITEM UPTO 40% OFF";
+}

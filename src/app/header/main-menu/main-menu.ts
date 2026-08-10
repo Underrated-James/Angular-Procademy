@@ -6,4 +6,11 @@ import { ButtonModule } from 'primeng/button';
   templateUrl: './main-menu.html',
   styleUrl: './main-menu.scss',
 })
-export class MainMenu {}
+export class MainMenu {
+  home = "Home";
+  display = false;
+
+  onclick(){
+    this.display = !this.display;
+  }
+}
