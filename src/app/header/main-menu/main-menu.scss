@@ -1,0 +1,22 @@
+:host {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.ekart-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    gap: 1.5rem;
+    color: #36454F;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;   
+    color: #28282B;
+}

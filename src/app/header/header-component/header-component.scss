@@ -3,6 +3,7 @@
     height: 11vh;
     display:flex;
     flex-wrap: wrap;
+    position: relative;
     border-bottom: #E5E4E2 1.5px solid;
 }
 
@@ -19,13 +20,6 @@
     padding: 1vh 2vh;
     font-size: 10px;
 }
-.ekart--top--bar{
-    width:auto;
-    text-align: right;
-    padding-top: 3px;
-    padding-bottom: 15px;
-    padding-right: 30px;
-}
 .ekart-menu{
     padding-top: 2vh;
     padding: 1vh 1vh;
@@ -38,11 +32,20 @@
 }
 .ekart--bottom--bar{
     display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+app-main-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .ekart--search-bar{
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-left: auto;
 }
 .ekart-search-box{
     width: 170px;
