@@ -14,7 +14,8 @@ export class ProductList {
     price: 999,
     discountedName: 'Samsung Galaxy',
     discountedPrice: 899,
-    inStock: 0
+    inStock: 0,
+    seller: "Apple"
   }
 
   fallback: number = 599;
