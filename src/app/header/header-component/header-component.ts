@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { MainMenu } from '../main-menu/main-menu';
 import { TopMenu } from '../top-menu/top-menu';
@@ -11,6 +11,7 @@ import { TopMenu } from '../top-menu/top-menu';
 })
 export class HeaderComponent {
   display = false;
+  Hover = signal("Search");
 
   onClick(){
     this.display = !this.display; 
