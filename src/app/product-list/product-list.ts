@@ -26,6 +26,10 @@ export class ProductList {
     img: '/Iphone 17.jpeg'
   }
 
+  dynamicPrice = computed(() => {
+    return this.product.price * this.qty() || 0;
+  })
+
   isDisabled = computed(() => {
     if(this.product.inStock > 0){
       return false;
