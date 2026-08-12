@@ -1,12 +1,15 @@
-
-
-<img [src]="product.img" [alt]="product.name">
-<p>Name: {{ product.name }}</p>
-<p>Price: {{ '$' + product.price }}</p>
-<p>Discounted Name: {{ product.discountedName }}</p>
-<p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
-<p>{{ product.inStock > 0 ? 'Only ' + product.inStock + ' left in stock' : 'Out of stock' }}</p>
-<p>Seller: {{ product.seller }}</p>
-<p-button label="Add to Cart" icon="pi pi-shopping-cart" bind-disabled="isDisabled()" (onClick)="addToCart()" ></p-button><br/>
-<p-autocomplete [(ngModel)]="value" [suggestions]="items" (completeMethod)="search($event)" />
-<p>Selected Value: {{ value }}</p>
+<div class="ekart--product-container">
+    <img [src]="product.img" [alt]="product.name">
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Discounted Name: {{ product.discountedName }}</p>
+    <p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
+    <p>{{ product.inStock > 0 ? 'Only ' + product.inStock + ' left in stock' : 'Out of stock' }}</p>
+        <p>Seller: {{ product.seller }}</p>
+        <p-button icon="pi pi-minus" aria-label="Remove Item" severity="danger" class="product--button" (onClick)="decrement()" [disabled]="qty() === 0"></p-button>
+    <span class="ekart--product-quantity">{{ qty() }}</span>
+    <p-button icon="pi pi-plus" aria-label="Add Item" severity="primary" class="product--button" (onClick)="increment()"></p-button>
+    <!-- <p-button label="Add to Cart" icon="pi pi-shopping-cart" bind-disabled="isDisabled()" (onClick)="addToCart()" ></p-button><br/>
+    <input type="text" pInputText [(ngModel)]="value" (input)="currentValue($event)"/>
+    <p>Selected Value: {{ value }}</p> -->
+</div>

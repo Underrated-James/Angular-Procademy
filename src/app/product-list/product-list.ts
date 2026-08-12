@@ -1,11 +1,11 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AutoCompleteCompleteEvent, AutoCompleteModule } from 'primeng/autocomplete';
 import { Button } from "primeng/button";
+import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
   selector: 'app-product-list',
-  imports: [Button, AutoCompleteModule, FormsModule],
+  imports: [Button,FormsModule, InputTextModule],
   templateUrl: './product-list.html',
   styleUrl: './product-list.scss',
 })
@@ -13,6 +13,8 @@ export class ProductList {
 
   items: any[] = [];
   value: any;
+  fallback: number = 599;
+  qty = signal(0);
 
   product = {
     name: 'iPhone',
@@ -31,21 +33,30 @@ export class ProductList {
       return true;
     }
   })
-
-
-  fallback: number = 599;
   
   getDiscountedPrice = computed(() => {
     return this.product.discountedPrice / 3 || this.fallback;
   })
   
-
   addToCart(){
     console.log('Button clicked! Adding product to cart...');
   }
-  
-  search(event: AutoCompleteCompleteEvent) {
-    this.items = [...Array(10).keys()].map((item) => event.query + '-' + item);
+
+  currentValue(event: any){
+    this.value = event.target.value;
+    console.log(event.target.value);
   }
+
+  increment(){
+    this.qty.update((value) => value + 1);
+  }
+
+  decrement(){
+    this.qty.update((value) => value - 1);
+  }
+  
+  // search(event: AutoCompleteCompleteEvent) {
+  //   this.items = [...Array(10).keys()].map((item) => event.query + '-' + item);
+  // }
 
 }
