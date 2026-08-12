@@ -1,7 +1,7 @@
 <div class="ekart--product-container">
     <img [src]="product.img" [alt]="product.name">
     <p>Name: {{ product.name }}</p>
-    <p>Price: {{ '$' + product.price }}</p>
+    <p>Price: {{ '$' + product.price.toFixed(2) }}</p>
     <p>Discounted Name: {{ product.discountedName }}</p>
     <p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
     <p>{{ product.inStock > 0 ? 'Only ' + product.inStock + ' left in stock' : 'Out of stock' }}</p>
@@ -12,4 +12,5 @@
     <!-- <p-button label="Add to Cart" icon="pi pi-shopping-cart" bind-disabled="isDisabled()" (onClick)="addToCart()" ></p-button><br/>
     <input type="text" pInputText [(ngModel)]="value" (input)="currentValue($event)"/>
     <p>Selected Value: {{ value }}</p> -->
+    <p>Total Price: {{ '$' + dynamicPrice().toFixed(2) }}</p>
 </div>
