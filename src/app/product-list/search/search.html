@@ -1,0 +1,23 @@
+
+    <!-- <p-autocomplete [(ngModel)]="value" [suggestions]="items" (completeMethod)="search($event)" />
+    <p-button class="ekart-search-product-input">Search</p-button>
+    
+    <div class="ekart-search-result-for">
+        <p><strong>Search result for: </strong> Mens wear</p>
+    </div>
+    <div class="ekart-product-container-header">
+        <h2>Shoes</h2>
+    </div>
+    <div class="ekart-product-container">
+        
+    </div>  -->
+    <div class="ekart--search--product">
+
+    <input class="ekart-search-product-input" bind-value="searchText" (input)="currentValue($event)">
+    <button class="btn btn-search" >Search</button>
+
+    </div>
+
+<div class="ekart-search-result-for">
+    <p><strong>Search result for:</strong> {{ searchText }}</p>
+</div>

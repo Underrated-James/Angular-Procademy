@@ -1,11 +1,11 @@
 import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Button } from "primeng/button";
 import { InputTextModule } from 'primeng/inputtext';
+import { Search } from './search/search';
 
 @Component({
   selector: 'app-product-list',
-  imports: [Button,FormsModule, InputTextModule],
+  imports: [FormsModule, InputTextModule, Search],
   templateUrl: './product-list.html',
   styleUrl: './product-list.scss',
 })

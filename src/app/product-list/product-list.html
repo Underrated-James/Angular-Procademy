@@ -1,5 +1,6 @@
 <div class="ekart--product-container">
-    <img [src]="product.img" [alt]="product.name">
+    <app-search/>
+    <!-- <img [src]="product.img" [alt]="product.name">
     <p>Name: {{ product.name }}</p>
     <p>Price: {{ '$' + product.price.toFixed(2) }}</p>
     <p>Discounted Name: {{ product.discountedName }}</p>
@@ -8,9 +9,9 @@
         <p>Seller: {{ product.seller }}</p>
         <p-button icon="pi pi-minus" aria-label="Remove Item" severity="danger" class="product--button" (onClick)="decrement()" [disabled]="qty() === 0"></p-button>
     <span class="ekart--product-quantity">{{ qty() }}</span>
-    <p-button icon="pi pi-plus" aria-label="Add Item" severity="primary" class="product--button" (onClick)="increment()" [disabled]="qty() >= product.inStock ? true : false"></p-button>
+    <p-button icon="pi pi-plus" aria-label="Add Item" severity="primary" class="product--button" (onClick)="increment()" [disabled]="qty() >= product.inStock ? true : false"></p-button> -->
     <!-- <p-button label="Add to Cart" icon="pi pi-shopping-cart" bind-disabled="isDisabled()" (onClick)="addToCart()" ></p-button><br/>
     <input type="text" pInputText [(ngModel)]="value" (input)="currentValue($event)"/>
     <p>Selected Value: {{ value }}</p> -->
-    <p>Total Price: {{ '$' + dynamicPrice().toFixed(2) }}</p>
+    <!-- <p>Total Price: {{ '$' + dynamicPrice().toFixed(2) }}</p> -->
 </div>
