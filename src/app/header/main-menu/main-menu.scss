@@ -1,22 +1,20 @@
 :host {
-    display: block;
-    width: auto;
-    margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: auto;
+  margin: 0 auto;
 }
 
 .ekart-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    gap: 1.5rem;
-    color: #36454F;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: normal;
-    font-size: 14px;
+  color: #36454F;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-a {
-    text-decoration: none;   
-    color: #28282B;
+.ekart-menu:hover {
+  color: #28282B;
 }
