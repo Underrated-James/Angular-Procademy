@@ -2,15 +2,16 @@ import { Component, computed, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { ProductList } from './product-list/product-list';
 import { Search } from './search/search';
 
 @Component({
-  selector: 'app-product-list',
-  imports: [FormsModule, InputTextModule, Search, ButtonModule],
-  templateUrl: './product-list.html',
-  styleUrl: './product-list.scss',
+  selector: 'app-container',
+  imports: [FormsModule, InputTextModule, Search, ButtonModule, ProductList],
+  templateUrl: './container.html',
+  styleUrl: './container.scss',
 })
-export class ProductList {
+export class Container {
 
   items: any[] = [];
   value: any;
